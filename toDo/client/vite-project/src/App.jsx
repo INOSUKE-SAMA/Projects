@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FaCheck, FaTimes, FaPlus } from 'react-icons/fa'; //install recat-icons for icons
+import { FaCheck, FaTimes, FaPlus } from 'react-icons/fa'; //install react-icons for icons
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -92,20 +92,20 @@ const App = () => {
           />
           <input
             type="text"
-            name="description"
-            value={newTask.description}
-            onChange={handleInputChange}
-            className="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Description"
-            required
-          />
-          <input
-            type="text"
             name="priority"
             value={newTask.priority}
             onChange={handleInputChange}
             className="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Priority"
+            required
+          />
+          <input
+            type="text"
+            name="description"
+            value={newTask.description}
+            onChange={handleInputChange}
+            className="flex-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Description"
             required
           />
           <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center">
@@ -131,7 +131,7 @@ const App = () => {
                   className="bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded-lg flex items-center justify-center"
                   onClick={() => completeTask(task._id)}
                 >
-                  <FaCheck /> 
+                  <FaCheck />
                 </button>
                 <button
                   className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-lg flex items-center justify-center"
