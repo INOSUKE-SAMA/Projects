@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="flex h-screen items-center justify-center bg-black">
       <div
-        className="container flex gap-6 h-[650px] w-[900px] justify-center items-center p-5 rounded-lg bg-black"  // Changed bg-black here
+        className="container flex gap-6 h-[650px] w-[900px] justify-center items-center p-5 rounded-lg bg-black"  
       >
         {images.map((imageUrl, index) => (
           <Card
